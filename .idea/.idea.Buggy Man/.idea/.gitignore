@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/modules.xml
+/.idea.Buggy Man.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\sektor\OneDrive\Documents\Game Jam\GameFolders\Buggy Man\.idea\.idea.Buggy Man\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
