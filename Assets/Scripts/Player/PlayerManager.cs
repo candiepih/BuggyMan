@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace Player
 {
@@ -17,6 +18,7 @@ namespace Player
         private delegate void ChangeState(PlayerState state);
 
         private ChangeState _myState;
+        public float lookDirection;
 
         public static PlayerManager Instance => _instance ? _instance : (_instance = FindObjectOfType<PlayerManager>());
 
@@ -26,6 +28,7 @@ namespace Player
         public Rigidbody2D rb;
         // private static Collision _collisionScript;
         protected CapsuleCollider2D Cc;
+        public ObjectPool<GameObject> pool;
 
         // Start is called before the first frame update
         private void Start()

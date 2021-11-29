@@ -6,7 +6,6 @@ namespace Player
     public class Move : MonoBehaviour
     {
         private static readonly int Run = Animator.StringToHash("Run");
-        private float _lookDirection;
         private static readonly int Jump = Animator.StringToHash("Jump");
         private const float MoveSpeed = 4f;
         private PlayerManager _pm;
@@ -37,7 +36,7 @@ namespace Player
 
         private void PlayerJump()
         {
-            var jumpDirection = new Vector2(0.5f, 0) * _lookDirection;
+            var jumpDirection = new Vector2(0.6f, 0) * _pm.lookDirection;
             
             _pm.anim.SetBool(Jump, true);
             _pm.rb.AddForce((Vector2.up + jumpDirection) * 5f, ForceMode2D.Impulse);
@@ -47,11 +46,13 @@ namespace Player
         {
             if (ctx.started)
             {
-                _lookDirection = ctx.ReadValue<float>();
+                _pm.lookDirection = ctx.ReadValue<float>();
+                PlayerRotation();
                 _pm.ChangePlayerState(PlayerManager.PlayerState.Run);
             }
             else if (ctx.canceled)
             {
+                _pm.lookDirection = 0.0f;
                 _pm.anim.SetBool(Run, false);
                 _pm.ChangePlayerState(PlayerManager.PlayerState.Idle);
             }
@@ -68,8 +69,7 @@ namespace Player
         private void PlayerMove()
         {
             _pm.anim.SetBool(Run, true);
-            transform.position += Vector3.right * (Time.deltaTime * MoveSpeed * _lookDirection);
-            PlayerRotation();
+            transform.position += Vector3.right * (Time.deltaTime * MoveSpeed * _pm.lookDirection);
         }
 
         private void PlayerRotation()
@@ -77,7 +77,7 @@ namespace Player
             var playerTransform = transform;
             var rotation = playerTransform.rotation;
             
-            playerTransform.eulerAngles = _lookDirection < 0 ?
+            playerTransform.eulerAngles = _pm.lookDirection < 0 ?
                 new Vector3(rotation.x, 180, rotation.z) :
                 new Vector3(rotation.x, rotation.y, rotation.z);
         }

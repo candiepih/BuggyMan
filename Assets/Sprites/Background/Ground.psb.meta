@@ -99,7 +99,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 886
+      y: 4
       width: 1920
       height: 318
     spriteID: 695f0a471fce1a04290629b0cbebf1d3
@@ -112,7 +112,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 886}
+    uvTransform: {x: 4, y: 4}
   - name: Bushes
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -121,7 +121,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 1212
+      y: 330
       width: 1602
       height: 171
     spriteID: 18ef653bf86ccc448909122b989e6769
@@ -134,29 +134,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -219, y: 992}
-  - name: Trees
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 1920
-      height: 874
-    spriteID: c542da3123d5fa34c9bcd15e6aadb6f2
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: -184}
+    uvTransform: {x: -219, y: 110}
   characterData:
     bones: []
     parts: []
@@ -177,7 +155,7 @@ ScriptedImporter:
   documentAlignment: 7
   importHiddenLayers: 0
   importedTextureWidth: 2048
-  importedTextureHeight: 2048
+  importedTextureHeight: 512
   documentSize: {x: 1920, y: 1080}
   paperDollMode: 0
   keepDupilcateSpriteName: 1
@@ -185,7 +163,7 @@ ScriptedImporter:
   spriteCategoryList:
     categories: []
   textureActualWidth: 2048
-  textureActualHeight: 2048
+  textureActualHeight: 512
   spritePackingTag: 
   resliceFromLayer: 0
   mosaicPSDLayers: []
@@ -203,20 +181,13 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: 18ef653bf86ccc448909122b989e6769
     layerID: 150
-    mosaicPosition: {x: 4, y: 1212}
+    mosaicPosition: {x: 4, y: 330}
   - name: Ground
     spriteName: Ground
     isGroup: 0
     parentIndex: 0
     spriteID: 695f0a471fce1a04290629b0cbebf1d3
     layerID: 101
-    mosaicPosition: {x: 4, y: 886}
-  - name: Trees
-    spriteName: Trees
-    isGroup: 0
-    parentIndex: 0
-    spriteID: c542da3123d5fa34c9bcd15e6aadb6f2
-    layerID: 165
     mosaicPosition: {x: 4, y: 4}
   sharedRigPSDLayers: []
   generateGOHierarchy: 0

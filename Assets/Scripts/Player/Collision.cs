@@ -25,7 +25,7 @@ namespace Player
         private void HandleJumpState()
         {
             anim.SetBool(Jump, false);
-            ChangePlayerState(PlayerState.Idle);
+            ChangePlayerState(PlayerState.Run);
         }
 
         private void OnCollisionEnter2D(Collision2D other)

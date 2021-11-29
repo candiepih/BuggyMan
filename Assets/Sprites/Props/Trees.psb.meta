@@ -197,31 +197,24 @@ ScriptedImporter:
     spriteID: 00000000000000000000000000000000
     layerID: 3
     mosaicPosition: {x: 0, y: 0}
-  - name: Trees
-    spriteName: 
-    isGroup: 1
-    parentIndex: 0
-    spriteID: 00000000000000000000000000000000
-    layerID: 31
-    mosaicPosition: {x: 0, y: 0}
   - name: Tree 3
     spriteName: Tree 3
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 0
     spriteID: 47e7ad4f84e424f43a73d6afc4096049
     layerID: 148
     mosaicPosition: {x: 4, y: 4}
   - name: Tree 2
     spriteName: Tree 2
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 0
     spriteID: 12c2a28325612564283716729c31d82b
     layerID: 144
     mosaicPosition: {x: 460, y: 4}
   - name: Tree 1
     spriteName: Tree 1
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 0
     spriteID: bedbe52643e7c7b469c87a7f47558037
     layerID: 138
     mosaicPosition: {x: 4, y: 854}

@@ -91,51 +91,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Ground
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1932
-      y: 999
-      width: 1920
-      height: 291
-    spriteID: 1228d0993678d0240a0a16a706c0cc01
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 1932, y: 999}
-  - name: Mountain middle
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1932
-      y: 4
-      width: 1920
-      height: 498
-    spriteID: 06c215755e806b64880fab65a61a5146
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 1932, y: 4}
-  - name: Mountain far
+  - name: Clouds
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -144,28 +100,6 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 2620
-      width: 1920
-      height: 538
-    spriteID: 66060078792996a4a9d3eada231f5f0e
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 2620}
-  - name: Clouds 2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1932
-      y: 510
       width: 1913
       height: 478
     spriteID: 4245761660d862848b270ebde028082d
@@ -178,30 +112,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1928, y: -89}
-  - name: Moon Big
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1146
-      y: 3166
-      width: 486
-      height: 470
-    spriteID: b162ee075ae73604c82aec3dcaa1f548
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 815, y: 2649}
-  - name: Big Moon Blur
+    uvTransform: {x: 0, y: 2021}
+  - name: Trees front
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -209,10 +121,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 3166
-      width: 1134
-      height: 885
-    spriteID: cd0cd68387bfb2e4b997996deff53f97
+      y: 2014
+      width: 1920
+      height: 598
+    spriteID: 7e60bbec93b799a46af84196da166c1d
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -222,19 +134,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 2971}
-  - name: Small Moon
+    uvTransform: {x: 4, y: 2014}
+  - name: Mountains
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 3860
-      y: 1611
-      width: 134
-      height: 131
-    spriteID: 0da68793e7a54004d998c9d347bd5ced
+      x: 4
+      y: 1092
+      width: 1920
+      height: 914
+    spriteID: f6d5c9032ef62d34dab5b9adca247c7f
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -244,29 +156,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2301, y: 776}
-  - name: Small Moon Blur
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1146
-      y: 3650
-      width: 329
-      height: 324
-    spriteID: 54cec7520c2a7324fb81e648997d0576
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -314, y: 2912}
+    uvTransform: {x: 4, y: 1092}
   - name: Sky
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -278,7 +168,7 @@ ScriptedImporter:
       y: 4
       width: 1920
       height: 1080
-    spriteID: d33ec2b4bf590954cb1448d77007b9e6
+    spriteID: 8486687efe7667240aeaf2e446486191
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -289,94 +179,6 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
-  - name: Trees
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1932
-      y: 1611
-      width: 1876
-      height: 278
-    spriteID: 87c1096bfb0f4ff4e82473c797075eac
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 1932, y: 1312}
-  - name: Gradient
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 1092
-      width: 1920
-      height: 914
-    spriteID: c9e8e524892ab3547948642dc6be73a7
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 1092}
-  - name: Trees
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1932
-      y: 1325
-      width: 1915
-      height: 278
-    spriteID: de24a88f7aa369a449b0a9012e5c0e7a
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 1932, y: 1146}
-  - name: Mist
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 2014
-      width: 1920
-      height: 598
-    spriteID: 33ce7f8e408b0b642baef8fc31104c2b
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 2014}
   characterData:
     bones: []
     parts: []
@@ -396,7 +198,7 @@ ScriptedImporter:
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 2048
+  importedTextureWidth: 1024
   importedTextureHeight: 2048
   documentSize: {x: 1920, y: 1080}
   paperDollMode: 0
@@ -404,7 +206,7 @@ ScriptedImporter:
   skeletonAssetReferenceID: 
   spriteCategoryList:
     categories: []
-  textureActualWidth: 4096
+  textureActualWidth: 2048
   textureActualHeight: 4096
   spritePackingTag: 
   resliceFromLayer: 0
@@ -417,123 +219,32 @@ ScriptedImporter:
     spriteID: 00000000000000000000000000000000
     layerID: 3
     mosaicPosition: {x: 0, y: 0}
-  - name: Grass
-    spriteName: 
-    isGroup: 1
-    parentIndex: 0
-    spriteID: 00000000000000000000000000000000
-    layerID: 110
-    mosaicPosition: {x: 0, y: 0}
-  - name: Ground
-    spriteName: Ground
-    isGroup: 0
-    parentIndex: 1
-    spriteID: 1228d0993678d0240a0a16a706c0cc01
-    layerID: 101
-    mosaicPosition: {x: 1932, y: 999}
-  - name: Mist
-    spriteName: Mist
+  - name: Trees front
+    spriteName: Trees front
     isGroup: 0
     parentIndex: 0
-    spriteID: 33ce7f8e408b0b642baef8fc31104c2b
+    spriteID: 7e60bbec93b799a46af84196da166c1d
     layerID: 93
     mosaicPosition: {x: 4, y: 2014}
-  - name: Trees
-    spriteName: 
-    isGroup: 1
-    parentIndex: 0
-    spriteID: 00000000000000000000000000000000
-    layerID: 31
-    mosaicPosition: {x: 0, y: 0}
-  - name: Trees
-    spriteName: Trees
-    isGroup: 0
-    parentIndex: 4
-    spriteID: de24a88f7aa369a449b0a9012e5c0e7a
-    layerID: 76
-    mosaicPosition: {x: 1932, y: 1325}
   - name: Mountains
-    spriteName: 
-    isGroup: 1
+    spriteName: Mountains
+    isGroup: 0
     parentIndex: 0
-    spriteID: 00000000000000000000000000000000
-    layerID: 29
-    mosaicPosition: {x: 0, y: 0}
-  - name: Mountain middle
-    spriteName: Mountain middle
-    isGroup: 0
-    parentIndex: 6
-    spriteID: 06c215755e806b64880fab65a61a5146
+    spriteID: f6d5c9032ef62d34dab5b9adca247c7f
     layerID: 28
-    mosaicPosition: {x: 1932, y: 4}
-  - name: Gradient
-    spriteName: Gradient
-    isGroup: 0
-    parentIndex: 6
-    spriteID: c9e8e524892ab3547948642dc6be73a7
-    layerID: 124
     mosaicPosition: {x: 4, y: 1092}
-  - name: Trees
-    spriteName: Trees
-    isGroup: 0
-    parentIndex: 6
-    spriteID: 87c1096bfb0f4ff4e82473c797075eac
-    layerID: 123
-    mosaicPosition: {x: 1932, y: 1611}
-  - name: Mountain far
-    spriteName: Mountain far
-    isGroup: 0
-    parentIndex: 6
-    spriteID: 66060078792996a4a9d3eada231f5f0e
-    layerID: 25
-    mosaicPosition: {x: 4, y: 2620}
-  - name: Clouds 2
-    spriteName: Clouds 2
+  - name: Clouds
+    spriteName: Clouds
     isGroup: 0
     parentIndex: 0
     spriteID: 4245761660d862848b270ebde028082d
     layerID: 103
-    mosaicPosition: {x: 1932, y: 510}
-  - name: Moon & Stars
-    spriteName: 
-    isGroup: 1
-    parentIndex: 0
-    spriteID: 00000000000000000000000000000000
-    layerID: 15
-    mosaicPosition: {x: 0, y: 0}
-  - name: Moon Big
-    spriteName: Moon Big
-    isGroup: 0
-    parentIndex: 12
-    spriteID: b162ee075ae73604c82aec3dcaa1f548
-    layerID: 106
-    mosaicPosition: {x: 1146, y: 3166}
-  - name: Big Moon Blur
-    spriteName: Big Moon Blur
-    isGroup: 0
-    parentIndex: 12
-    spriteID: cd0cd68387bfb2e4b997996deff53f97
-    layerID: 11
-    mosaicPosition: {x: 4, y: 3166}
-  - name: Small Moon
-    spriteName: Small Moon
-    isGroup: 0
-    parentIndex: 12
-    spriteID: 0da68793e7a54004d998c9d347bd5ced
-    layerID: 19
-    mosaicPosition: {x: 3860, y: 1611}
-  - name: Small Moon Blur
-    spriteName: Small Moon Blur
-    isGroup: 0
-    parentIndex: 12
-    spriteID: 54cec7520c2a7324fb81e648997d0576
-    layerID: 10
-    mosaicPosition: {x: 1146, y: 3650}
+    mosaicPosition: {x: 4, y: 2620}
   - name: Sky
     spriteName: Sky
     isGroup: 0
     parentIndex: 0
-    spriteID: d33ec2b4bf590954cb1448d77007b9e6
+    spriteID: 8486687efe7667240aeaf2e446486191
     layerID: 5
     mosaicPosition: {x: 4, y: 4}
   sharedRigPSDLayers: []
