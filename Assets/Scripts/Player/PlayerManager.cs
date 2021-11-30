@@ -26,9 +26,14 @@ namespace Player
         public bool isGrounded;
         public Animator anim;
         public Rigidbody2D rb;
+        public float health;
+        public float ammo;
+        public float maxHealth;
+        public float maxAmmo;
+        public ObjectPool<GameObject> Pool;
+        public int spawnEnemiesCount;
         // private static Collision _collisionScript;
         protected CapsuleCollider2D Cc;
-        public ObjectPool<GameObject> pool;
 
         // Start is called before the first frame update
         private void Start()
@@ -39,6 +44,10 @@ namespace Player
             rb = GetComponent<Rigidbody2D>();
             Cc = GetComponent<CapsuleCollider2D>();
             // _collisionScript = GetComponent<Collision>();
+            health = 100.0f;
+            ammo = 30.0f;
+            maxHealth = 100.0f;
+            maxAmmo = 30.0f;
             isGrounded = true;
         }
 

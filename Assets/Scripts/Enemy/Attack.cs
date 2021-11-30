@@ -1,20 +1,40 @@
 using System.Collections;
-using System.Collections.Generic;
+using Player;
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+namespace Enemy
 {
-    [HideInInspector] public float health = 100.0f;
-    public float damageAmount = 10.0f;
-    // Start is called before the first frame update
-    private void Start()
+    public class Attack : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private float damage;
+        private PlayerManager _pm;
+        private bool _hasAttacked;
 
-    // Update is called once per frame
-    private void Update()
-    {
-        
+        private void Start()
+        {
+            _pm = PlayerManager.Instance;
+        }
+
+        private void Update()
+        {
+            if (!_hasAttacked)
+            {
+                DamagePlayer();
+            }
+        }
+
+        private void DamagePlayer()
+        {
+            if (!(Vector2.Distance(transform.position, _pm.transform.position) < 1.5f)) return;
+            _hasAttacked = true;
+            _pm.health -= damage;
+            StartCoroutine(WaitNextAttack());
+        }
+
+        private IEnumerator WaitNextAttack()
+        {
+            yield return new WaitForSeconds(1f);
+            _hasAttacked = false;
+        }
     }
 }

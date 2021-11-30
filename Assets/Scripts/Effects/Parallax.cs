@@ -23,7 +23,7 @@ namespace Effects
             _pm = PlayerManager.Instance;
         }
 
-        private void FixedUpdate()
+        private void LateUpdate()
         {
             ParallaxEffect();
         }
@@ -32,7 +32,7 @@ namespace Effects
         {
             if (_pm.lookDirection == 0) return;
             var camPosition = _cam.transform.position;
-            var temp = camPosition.x * (1.1f - effectAmount);
+            var temp = camPosition.x * (1f - effectAmount);
             var dist = camPosition.x * effectAmount;
             var mTransform = transform;
             var pos = mTransform.position;

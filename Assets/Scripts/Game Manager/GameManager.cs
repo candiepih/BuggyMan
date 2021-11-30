@@ -20,6 +20,9 @@ namespace Game_Manager
             private set;
         }
         private static GameManager _instance;
+        public bool gameWon;
+        public string gameLostText;
+        public string gameWonText;
 
         public static GameManager Instance
         {
@@ -34,9 +37,12 @@ namespace Game_Manager
             }
         }
 
-        void Awake()
+        private void Awake()
         {
             DontDestroyOnLoad(Instance);
+            gameWon = false;
+            gameLostText = "Not all good stories have a happy ending.";
+            gameWonText = "Luckily he escaped the place.";
         }
 
         public void ChangeGameState(GameState newState)

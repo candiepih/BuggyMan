@@ -1,30 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Pickups;
 using Player;
+using UnityEngine;
+using Properties = Enemy.Properties;
 
-public class Projectile : MonoBehaviour
+
+namespace Projectiles
 {
-    private PlayerManager _pm;
-
-    // Start is called before the first frame update
-    void Start()
+    public class Projectile : MonoBehaviour
     {
-        _pm = PlayerManager.Instance;
-    }
+        
+        private PlayerManager _pm;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
+        // Start is called before the first frame update
+        private void Start()
         {
-            _pm.pool.Release(gameObject);
-            var EnemyGameObject = collision.gameObject;
-            var attack = EnemyGameObject.GetComponent<Attack>();
-            attack.health -= attack.damageAmount;
-            if (attack.health <= 0)
-            {
-                Destroy(EnemyGameObject);
-            }
+            _pm = PlayerManager.Instance;
+        }
+        
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (!collision.gameObject.CompareTag("Enemy")) return;
+            _pm.Pool.Release(gameObject);
+            var enemyGameObject = collision.gameObject;
+            var enemyProperties = enemyGameObject.GetComponent<Properties>();
+            enemyProperties.health -= enemyProperties.damageAmount;
+            
+            if (!(enemyProperties.health <= 0)) return;
+            enemyGameObject.GetComponent<Spawn>().SpawnPickup();
+            Destroy(enemyGameObject);
+            _pm.spawnEnemiesCount--;
         }
     }
 }

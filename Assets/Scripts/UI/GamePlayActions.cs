@@ -2,6 +2,7 @@ using System;
 using Game_Manager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace UI
 {
@@ -9,6 +10,7 @@ namespace UI
     {
         [SerializeField] private GameObject gameOverPanel;
         [SerializeField] private GameObject pausePanel;
+        [SerializeField] private TextMeshProUGUI gameOverMessageText;
         private GameManager _gm;
         
         // Start is called before the first frame update
@@ -62,6 +64,7 @@ namespace UI
 
         private void GameOverPanel()
         {
+            gameOverMessageText.text = _gm.gameWon ? _gm.gameWonText : _gm.gameLostText;
             gameOverPanel.SetActive(true);
         }
 

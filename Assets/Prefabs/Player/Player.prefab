@@ -2108,9 +2108,11 @@ GameObject:
   - component: {fileID: 230564271}
   - component: {fileID: 5447559473792812309}
   - component: {fileID: 1949702055}
+  - component: {fileID: 6422629898878247054}
+  - component: {fileID: 3264722495244667919}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2215,6 +2217,8 @@ MonoBehaviour:
   isGrounded: 0
   anim: {fileID: 0}
   rb: {fileID: 0}
+  health: 0
+  ammo: 0
 --- !u!114 &778593373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2358,6 +2362,8 @@ MonoBehaviour:
   isGrounded: 0
   anim: {fileID: 0}
   rb: {fileID: 0}
+  health: 0
+  ammo: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -2373,8 +2379,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2bd47e254da0bc4f87e6e3e15e2e130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6422629898878247054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303958343636792497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 325fe47b0711964499d2668ca431c722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3264722495244667919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303958343636792497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867eeb0c54c297c4b9a3937bf863e5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7418174341143039018, guid: 631f2bbb0e515b14ca72b88bb895f001, type: 3}
   spawnLocation: {fileID: 1472558579}
+  collectionChecks: 0
 --- !u!1 &6318392111175329116
 GameObject:
   m_ObjectHideFlags: 0

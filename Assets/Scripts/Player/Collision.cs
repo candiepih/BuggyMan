@@ -30,7 +30,7 @@ namespace Player
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (isGrounded || !other.gameObject.CompareTag($"Obstacle")) return;
+            if (isGrounded || other.gameObject.CompareTag($"Obstacle")) return;
             isGrounded = true;
             HandleJumpState();
         }
