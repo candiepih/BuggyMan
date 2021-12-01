@@ -17,6 +17,10 @@ namespace UI
         private void Start()
         {
             _gm = GameManager.Instance;
+            if (!_gm)
+            {
+                _gm = FindObjectOfType<GameManager>();
+            }
         }
 
         // Update is called once per frame
@@ -70,6 +74,10 @@ namespace UI
 
         private void GoToMenu()
         {
+            if (Time.timeScale  == 0)
+            {
+                Time.timeScale = 1;
+            }
             SceneManager.LoadScene("Menu");
         }
 

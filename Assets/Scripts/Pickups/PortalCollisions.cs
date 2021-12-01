@@ -1,6 +1,4 @@
-using System;
 using Player;
-using TreeEditor;
 using UnityEngine;
 
 namespace Pickups

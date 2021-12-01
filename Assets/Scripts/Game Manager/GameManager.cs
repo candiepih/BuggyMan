@@ -39,7 +39,7 @@ namespace Game_Manager
 
         private void Awake()
         {
-            DontDestroyOnLoad(Instance);
+            DontDestroyOnLoad(gameObject);
             gameWon = false;
             gameLostText = "Not all good stories have a happy ending.";
             gameWonText = "Luckily he escaped the place.";
