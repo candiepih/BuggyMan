@@ -100,17 +100,6 @@ public class @Input : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""c589b7a4-8161-4e0f-91b2-434657b67c43"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""3d1bf87d-8856-4e74-a7fc-75d389edc50f"",
                     ""path"": ""<Keyboard>/f"",

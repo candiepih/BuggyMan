@@ -94,6 +94,9 @@ SpriteAtlas:
   - {fileID: 6733362727367818889, guid: 46b85b9809876714792556bfa61a91cc, type: 3}
   - {fileID: 2785870095127372671, guid: 46b85b9809876714792556bfa61a91cc, type: 3}
   - {fileID: -2759572050312322720, guid: 46b85b9809876714792556bfa61a91cc, type: 3}
+  - {fileID: 5397399727576895433, guid: ffc86cb8fd9471a4b8588c0795de21e1, type: 3}
+  - {fileID: -423291885295511148, guid: ffc86cb8fd9471a4b8588c0795de21e1, type: 3}
+  - {fileID: -160751173383564315, guid: ffc86cb8fd9471a4b8588c0795de21e1, type: 3}
   - {fileID: -3191738161577519788, guid: 86f23c6913b8ef643986d72c1b671fd3, type: 3}
   - {fileID: 5092664962649524563, guid: 86f23c6913b8ef643986d72c1b671fd3, type: 3}
   - {fileID: -1604122887628405579, guid: 86f23c6913b8ef643986d72c1b671fd3, type: 3}
@@ -120,6 +123,7 @@ SpriteAtlas:
   - {fileID: 2097608840892501573, guid: 4919ef9cd3cb0cc45a8e82b86475ebd5, type: 3}
   - {fileID: -966734320542541611, guid: cc5573dcf74e1f9408ebe7a5eed8a298, type: 3}
   - {fileID: -8525546710488229251, guid: cc5573dcf74e1f9408ebe7a5eed8a298, type: 3}
+  - {fileID: 2073934785438691288, guid: 9d3851fc751b6b84db0251f859a95bba, type: 3}
   - {fileID: -1702229072198639354, guid: d9df5dbd0336ab34a99b764fc4a33ba6, type: 3}
   - {fileID: -1118594053634380343, guid: d9df5dbd0336ab34a99b764fc4a33ba6, type: 3}
   - {fileID: 4167459344190572632, guid: d9df5dbd0336ab34a99b764fc4a33ba6, type: 3}
@@ -174,6 +178,9 @@ SpriteAtlas:
   - Leaves
   - Leaves
   - Barks
+  - Door Main
+  - Pass Through
+  - Outlines
   - Hood_Fore
   - Face
   - Arm
@@ -200,6 +207,7 @@ SpriteAtlas:
   - Fern copy 10
   - Ground
   - Bushes
+  - Muzzle
   - Tree 3
   - Tree 2
   - Tree 1

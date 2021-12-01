@@ -21,7 +21,7 @@ namespace Enemy
         {
             _pm = PlayerManager.Instance;
             InvokeRepeating(nameof(SpawnEnemiesPrefabs), spawnTime, spawnTime);
-            InvokeRepeating(nameof(SpawnPickupsPrefabs), PickupsSpawnTime, Random.Range(15, 30));
+            InvokeRepeating(nameof(SpawnPickupsPrefabs), PickupsSpawnTime, Random.Range(10, 20));
             _maxEnemies = 3;
         }
 
@@ -29,7 +29,35 @@ namespace Enemy
         {
             var playerPosition = _pm.transform.position;
             _spawnPosition = new Vector3(playerPosition.x + Random.Range(4, 10), 0, 0);
-            _pickupsSpawnPosition = new Vector3(playerPosition.x + Random.Range(5, 10), playerPosition.y + 1, 0);
+            _pickupsSpawnPosition = new Vector3(playerPosition.x + Random.Range(5, 7), playerPosition.y + 1, 0);
+            DestroyEnemiesOutOfRange();
+            DestroyPickupsOutOfRange();
+        }
+
+        private void DestroyEnemiesOutOfRange()
+        {
+            var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (var enemyObject in enemies)
+            {
+                if (!(enemyObject.transform.position.y < -5.0f)) continue;
+                Destroy(enemyObject);
+                if (_pm.spawnEnemiesCount > 0)
+                {
+                    _pm.spawnEnemiesCount--;
+                }
+            }
+        }
+        
+        private void DestroyPickupsOutOfRange()
+        {
+            var pickupPrefabs = GameObject.FindGameObjectsWithTag("Pickup");
+            foreach (var pickupObject in pickupPrefabs)
+            {
+                if (pickupObject.transform.position.y < -5.0f)
+                {
+                    Destroy(pickupObject);
+                }
+            }
         }
 
         private void SpawnEnemiesPrefabs()

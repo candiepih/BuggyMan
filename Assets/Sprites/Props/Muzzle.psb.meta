@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a3e87848ff39ca847960557bff978682
+guid: 9d3851fc751b6b84db0251f859a95bba
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -29,7 +29,7 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 0
+    spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 100
@@ -91,7 +91,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Layer 1
+  - name: Muzzle
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -100,9 +100,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1920
-      height: 145
-    spriteID: 617b4648bfb208042a4dfa006f74cda9
+      width: 210
+      height: 213
+    spriteID: 6208a954cb1e66e4cada8e2ac09141f0
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -112,7 +112,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: -757, y: -450}
   characterData:
     bones: []
     parts: []
@@ -126,35 +126,13 @@ ScriptedImporter:
     dimension: {x: 0, y: 0}
     characterGroups: []
     boneReadOnly: 0
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   mosaicLayers: 1
   characterMode: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 2048
+  importedTextureWidth: 256
   importedTextureHeight: 256
   documentSize: {x: 1920, y: 1080}
   paperDollMode: 0
@@ -162,7 +140,7 @@ ScriptedImporter:
   skeletonAssetReferenceID: 
   spriteCategoryList:
     categories: []
-  textureActualWidth: 2048
+  textureActualWidth: 256
   textureActualHeight: 256
   spritePackingTag: 
   resliceFromLayer: 0
@@ -172,20 +150,20 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 
     layerID: 3
     mosaicPosition: {x: 0, y: 0}
-  - name: Layer 1
-    spriteName: Layer 1
+  - name: Muzzle
+    spriteName: Muzzle
     isGroup: 0
     parentIndex: 0
-    spriteID: 617b4648bfb208042a4dfa006f74cda9
-    layerID: 99
+    spriteID: 6208a954cb1e66e4cada8e2ac09141f0
+    layerID: 5
     mosaicPosition: {x: 4, y: 4}
   sharedRigPSDLayers: []
   generateGOHierarchy: 0
-  textureAssetName: ForeGround Texture
-  prefabAssetName: ForeGround Prefab
-  spriteLibAssetName: ForeGround Sprite Lib
-  skeletonAssetName: ForeGround Skeleton
+  textureAssetName: Muzzle Texture
+  prefabAssetName: Muzzle Prefab
+  spriteLibAssetName: Muzzle Sprite Lib
+  skeletonAssetName: Muzzle Skeleton
   secondarySpriteTextures: []

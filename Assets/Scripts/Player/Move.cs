@@ -1,3 +1,4 @@
+using Game_Manager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,10 +10,12 @@ namespace Player
         private static readonly int Jump = Animator.StringToHash("Jump");
         private const float MoveSpeed = 4f;
         private PlayerManager _pm;
+        private GameManager _gm;
 
         private void Start()
         {
             _pm = PlayerManager.Instance;
+            _gm = GameManager.Instance;
         }
 
         private void Update()
@@ -39,7 +42,7 @@ namespace Player
             var jumpDirection = new Vector2(0.6f, 0) * _pm.lookDirection;
             
             _pm.anim.SetBool(Jump, true);
-            _pm.rb.AddForce((Vector2.up + jumpDirection) * 5f, ForceMode2D.Impulse);
+            _pm.rb.AddForce((Vector2.up + jumpDirection) * 100f, ForceMode2D.Impulse);
         }
 
         public void OnMove(InputAction.CallbackContext ctx)
@@ -60,9 +63,15 @@ namespace Player
 
         public void OnJump(InputAction.CallbackContext ctx)
         {
-            if (ctx.started && _pm.isGrounded)
+            switch (ctx.started)
             {
-                _pm.ChangePlayerState(PlayerManager.PlayerState.Jump);
+                case true when _pm.canTeleport:
+                    _gm.gameWon = true;
+                    _gm.ChangeGameState(GameManager.GameState.GameOver);
+                    break;
+                case true when _pm.isGrounded:
+                    _pm.ChangePlayerState(PlayerManager.PlayerState.Jump);
+                    break;
             }
         }
 

@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Enemy
   - Pickup
+  - Portal
   layers:
   - Default
   - TransparentFX

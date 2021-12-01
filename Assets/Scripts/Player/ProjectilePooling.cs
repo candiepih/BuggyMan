@@ -29,7 +29,7 @@ namespace Player
                     }
                 }, 
                 Destroy,
-                collectionChecks, 35, 50);
+                collectionChecks, 90, 100);
         }
 
         private void ResetProjectile(GameObject obj)

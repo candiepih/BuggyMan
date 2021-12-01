@@ -32,6 +32,9 @@ namespace Player
         public float maxAmmo;
         public ObjectPool<GameObject> Pool;
         public int spawnEnemiesCount;
+        public AudioSource audioSource;
+
+        public bool canTeleport;
         // private static Collision _collisionScript;
         protected CapsuleCollider2D Cc;
 
@@ -43,12 +46,14 @@ namespace Player
             anim = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
             Cc = GetComponent<CapsuleCollider2D>();
+            audioSource = GetComponent<AudioSource>();
             // _collisionScript = GetComponent<Collision>();
             health = 100.0f;
-            ammo = 30.0f;
+            ammo = 100.0f;
             maxHealth = 100.0f;
-            maxAmmo = 30.0f;
+            maxAmmo = 100.0f;
             isGrounded = true;
+            canTeleport = false;
         }
 
         public void ChangePlayerState(PlayerState newState)
