@@ -2,51 +2,28 @@ using UnityEngine;
 
 namespace Player
 {
-    public class Collision : PlayerManager
+    public class Collision : MonoBehaviour
     {
-        [SerializeField]
-        private LayerMask groundLayer;
-
-        private static readonly int Jump = Animator.StringToHash("Jump");
-
-        private void Update()
+        private PlayerManager _pm;
+        private void Start()
         {
-            CheckPlayerColliding();
-        }
-
-        private void CheckPlayerColliding()
-        {
-            if (isGrounded) return;
-            TestCollision();
-            if (isGrounded)
-                HandleJumpState();
+            _pm = PlayerManager.Instance;
         }
 
         private void HandleJumpState()
         {
-            anim.SetBool(Jump, false);
-            ChangePlayerState(PlayerState.Idle);
-            isGrounded = true;
+            _pm.anim.SetBool(_pm.Jump, false);
+            var posDif = (transform.position.x - _pm.playerPositionX);
+            _pm.ChangePlayerState((posDif < 0.1f && posDif > -0.1f) ? PlayerManager.PlayerState.Idle : PlayerManager.PlayerState.Run);
+            _pm.isGrounded = true;
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (!isGrounded || other.gameObject.CompareTag($"Enemy"))
+            if (!_pm.isGrounded && (other.gameObject.CompareTag($"Ground") || other.gameObject.CompareTag($"Enemy")))
             {
                 HandleJumpState();
             }
         }
-
-        private void TestCollision()
-        {
-            var bounds = Cc.bounds;
-            // var boundHeight = bounds.extents.y - 1.22f;
-            var boundHeight = bounds.extents.y - 1.4f;
-            var rayCastHit = Physics2D.CapsuleCast(bounds.center, bounds.size,
-                CapsuleDirection2D.Vertical, 0f, Vector2.down, boundHeight, groundLayer);
-            isGrounded = rayCastHit.collider;
-        }
-        
-        
     }
 }

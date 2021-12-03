@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1562245151677909525}
   m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212116894733238372}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 3331035331729511351}
   - component: {fileID: 5715101776772151271}
   - component: {fileID: 1441892654104331961}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bushes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 3684508433170396761}
   - component: {fileID: 7518164020512916098}
   - component: {fileID: 6795237965310362307}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trees (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6341311163408198794}
   - component: {fileID: 5528335957991508070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bushes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2416073076906375303}
   - component: {fileID: 4026019036830296342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bushes (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7439876545187586087}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 3418047879440235011}
   - component: {fileID: 994558302240668717}
   - component: {fileID: 8935675257980622636}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trees (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,7 +1048,7 @@ GameObject:
   - component: {fileID: 927921226314163110}
   - component: {fileID: 1684243461579903569}
   - component: {fileID: 7264154547748257826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}

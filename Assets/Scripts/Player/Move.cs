@@ -1,3 +1,4 @@
+using System;
 using Game_Manager;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,8 +7,6 @@ namespace Player
 {
     public class Move : MonoBehaviour
     {
-        private static readonly int Run = Animator.StringToHash("Run");
-        private static readonly int Jump = Animator.StringToHash("Jump");
         private const float MoveSpeed = 4f;
         private PlayerManager _pm;
         private GameManager _gm;
@@ -32,8 +31,13 @@ namespace Player
                     break;
                 case PlayerManager.PlayerState.Jump when _pm.isGrounded:
                     PlayerJump();
-                    _pm.isGrounded = false;
                     break;
+                case PlayerManager.PlayerState.Idle:
+                    break;
+                case PlayerManager.PlayerState.Attack:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 
@@ -41,8 +45,10 @@ namespace Player
         {
             var jumpDirection = new Vector2(0.6f, 0) * _pm.lookDirection;
             
-            _pm.anim.SetBool(Jump, true);
+            _pm.isGrounded = false;
+            _pm.anim.SetBool(_pm.Jump, true);
             _pm.rb.AddForce((Vector2.up + jumpDirection) * 100f, ForceMode2D.Impulse);
+            _pm.playerPositionX = transform.position.x;
         }
 
         public void OnMove(InputAction.CallbackContext ctx)
@@ -56,7 +62,7 @@ namespace Player
             else if (ctx.canceled)
             {
                 _pm.lookDirection = 0.0f;
-                _pm.anim.SetBool(Run, false);
+                _pm.anim.SetBool(_pm.Run, false);
                 _pm.ChangePlayerState(PlayerManager.PlayerState.Idle);
             }
         }
@@ -69,7 +75,7 @@ namespace Player
                     _gm.gameWon = true;
                     _gm.ChangeGameState(GameManager.GameState.GameOver);
                     break;
-                case true when _pm.isGrounded:
+                case true:
                     _pm.ChangePlayerState(PlayerManager.PlayerState.Jump);
                     break;
             }
@@ -77,7 +83,7 @@ namespace Player
 
         private void PlayerMove()
         {
-            _pm.anim.SetBool(Run, true);
+            _pm.anim.SetBool(_pm.Run, true);
             transform.position += Vector3.right * (Time.deltaTime * MoveSpeed * _pm.lookDirection);
         }
 

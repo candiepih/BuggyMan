@@ -11,9 +11,9 @@ namespace Pickups
             _pickups = GetComponent<Pickups>();
         }
         
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.gameObject.CompareTag($"Player")) return;
+            if (!other.CompareTag($"Player")) return;
             _pickups.CollectPickup();
             Destroy(gameObject);
         }

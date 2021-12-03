@@ -16,6 +16,8 @@ namespace Player
         private static PlayerManager _instance;
         
         private delegate void ChangeState(PlayerState state);
+        public readonly int Jump = Animator.StringToHash("Jump");
+        public readonly int Run = Animator.StringToHash("Run");
 
         private ChangeState _myState;
         public float lookDirection;
@@ -33,10 +35,11 @@ namespace Player
         public ObjectPool<GameObject> Pool;
         public int spawnEnemiesCount;
         public AudioSource audioSource;
+        public float playerPositionX;
 
         public bool canTeleport;
         // private static Collision _collisionScript;
-        protected CapsuleCollider2D Cc;
+        // private CapsuleCollider2D _cc;
 
         // Start is called before the first frame update
         private void Start()
@@ -45,7 +48,7 @@ namespace Player
             _myState(PlayerState.Idle);
             anim = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
-            Cc = GetComponent<CapsuleCollider2D>();
+            // _cc = GetComponent<CapsuleCollider2D>();
             audioSource = GetComponent<AudioSource>();
             // _collisionScript = GetComponent<Collision>();
             health = 100.0f;
