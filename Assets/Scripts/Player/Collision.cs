@@ -17,7 +17,7 @@ namespace Player
             _pm.ChangePlayerState((posDif < 0.1f && posDif > -0.1f) ? PlayerManager.PlayerState.Idle : PlayerManager.PlayerState.Run);
             _pm.isGrounded = true;
         }
-
+        
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!_pm.isGrounded && (other.gameObject.CompareTag($"Ground") || other.gameObject.CompareTag($"Enemy")))

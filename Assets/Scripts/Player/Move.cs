@@ -31,6 +31,7 @@ namespace Player
                     break;
                 case PlayerManager.PlayerState.Jump when _pm.isGrounded:
                     PlayerJump();
+                    _pm.isGrounded = false;
                     break;
                 case PlayerManager.PlayerState.Idle:
                     break;
@@ -45,7 +46,6 @@ namespace Player
         {
             var jumpDirection = new Vector2(0.6f, 0) * _pm.lookDirection;
             
-            _pm.isGrounded = false;
             _pm.anim.SetBool(_pm.Jump, true);
             _pm.rb.AddForce((Vector2.up + jumpDirection) * 100f, ForceMode2D.Impulse);
             _pm.playerPositionX = transform.position.x;

@@ -9,6 +9,7 @@ namespace Player
         [SerializeField] private GameObject muzzleFlash;
         [SerializeField] private AudioClip shootSound;
         private PlayerManager _pm;
+        
 
         private void Start()
         {
@@ -23,6 +24,7 @@ namespace Player
             _pm.audioSource.PlayOneShot(shootSound);
             _pm.Pool.Get();
             _pm.ammo -= 1.0f;
+            _pm.anim.SetTrigger(_pm.Attack);
             StartCoroutine(nameof(TurnMuzzleFlashOff));
         }
         

@@ -2224,7 +2224,9 @@ MonoBehaviour:
   maxAmmo: 0
   spawnEnemiesCount: 0
   audioSource: {fileID: 0}
+  playerPositionX: 0
   canTeleport: 0
+  cc: {fileID: 0}
 --- !u!114 &778593373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2364,20 +2366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a9b21849efe2fb4681886b0f7de3acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookDirection: 0
-  isGrounded: 0
-  anim: {fileID: 0}
-  rb: {fileID: 0}
-  health: 0
-  ammo: 0
-  maxHealth: 0
-  maxAmmo: 0
-  spawnEnemiesCount: 0
-  audioSource: {fileID: 0}
-  canTeleport: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &1949702055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2431,7 +2419,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
