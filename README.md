@@ -10,6 +10,9 @@ A 2D shooter game, kill insect-like bug creatures, find a way out.
 A child is being told a story by his mom about a kid who finds a cave and out of curiosity, he goes through it only to find himself in an opposite dimension without a way back.
 The only way home is to fight the buggy creatures and find the portal that opens once in a while. Luckily you have a weapon. Find the Kid's way out.
 
+![Menu](https://user-images.githubusercontent.com/44834632/144709059-56912798-7485-4092-823c-706b94581d8a.png)
+![GamePlay](https://user-images.githubusercontent.com/44834632/144709078-d9662b78-fb38-4eda-86b0-570c652cc967.png)
+
 ### Install instructions
 
 Download the zip file. Unzip the file and run the executable "BuggyMan".
@@ -42,3 +45,6 @@ SFX from Sci-fi Guns SFX Pack [Unity asset store](https://assetstore.unity.com/p
 
 Sprites, Images handcrafted by me.
 
+### Author
+
+Alex Steve [Candiepih](https://github.com/candiepih/)
