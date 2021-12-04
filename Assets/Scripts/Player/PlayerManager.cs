@@ -53,7 +53,7 @@ namespace Player
             audioSource = GetComponent<AudioSource>();
             // _collisionScript = GetComponent<Collision>();
             health = 100.0f;
-            ammo = 100.0f;
+            ammo = 60.0f;
             maxHealth = 100.0f;
             maxAmmo = 100.0f;
             isGrounded = true;

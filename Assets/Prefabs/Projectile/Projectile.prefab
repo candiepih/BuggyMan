@@ -119,8 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78aa1b2c25271be45b711ac74dea105e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 7418174341143039018}
-  spawnLocation: {fileID: 0}
+  hitEffect: {fileID: 3851893659269907773, guid: d934a080d4b7eb64cb45b125db377be6, type: 3}
 --- !u!58 &6034077684898927576
 CircleCollider2D:
   m_ObjectHideFlags: 0

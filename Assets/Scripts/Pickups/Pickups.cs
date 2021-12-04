@@ -11,6 +11,7 @@ namespace Pickups {
         private void Start()
         {
             _pm = PlayerManager.Instance;
+            Destroy(gameObject, 5.0f);
         }
 
         public void CollectPickup()

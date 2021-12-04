@@ -23,7 +23,7 @@ namespace Pickups
         {
             var distance = Vector2.Distance(_pm.transform.position, _playerStartPosition);
 
-            if (!(distance > 200) || !(_pm.transform.position.x > 0) || _activePortal) return;
+            if (!(distance > 300) || !(_pm.transform.position.x > 0) || _activePortal) return;
             _activePortal = true;
             var playerTransform = _pm.transform;
             var playerPosition = playerTransform.position;
@@ -34,7 +34,7 @@ namespace Pickups
 
         private IEnumerator DestroyAfterTime(Object portal)
         {
-            yield return new WaitForSeconds(30);
+            yield return new WaitForSeconds(10);
             Destroy(portal);
             yield return new WaitForSeconds(30);
             _activePortal = false;

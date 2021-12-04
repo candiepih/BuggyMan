@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Player;
 using UnityEngine;
@@ -16,13 +17,15 @@ namespace Enemy
         private Vector3 _pickupsSpawnPosition;
         private PlayerManager _pm;
         private int _maxEnemies = 3;
+        private Vector2 _playerStartPosition;
 
         private void Start()
         {
             _pm = PlayerManager.Instance;
             InvokeRepeating(nameof(SpawnEnemiesPrefabs), spawnTime, spawnTime);
-            InvokeRepeating(nameof(SpawnPickupsPrefabs), PickupsSpawnTime, Random.Range(10, 20));
+            InvokeRepeating(nameof(SpawnPickupsPrefabs), PickupsSpawnTime, 15.0f);
             _maxEnemies = 3;
+            _playerStartPosition = _pm.transform.position;
         }
 
         private void Update()
@@ -32,6 +35,15 @@ namespace Enemy
             _pickupsSpawnPosition = new Vector3(playerPosition.x + Random.Range(5, 7), playerPosition.y + 1, 0);
             DestroyEnemiesOutOfRange();
             DestroyPickupsOutOfRange();
+            CheckEnemiesLimit();
+        }
+
+        private void CheckEnemiesLimit()
+        {
+            var distance = Vector2.Distance(_pm.transform.position, _playerStartPosition);
+            
+            var enemies = (int)Math.Round(distance / 100);
+            _maxEnemies += enemies;
         }
 
         private void DestroyEnemiesOutOfRange()

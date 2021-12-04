@@ -1403,7 +1403,6 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1543,24 +1542,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5175fbd61d0c54f9aefafbdc1263f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgrounds:
-  - {fileID: 0}
-  - {fileID: 6690757016533815376}
-  - {fileID: 5514915142766616978}
-  - {fileID: 1942755866840014100}
-  smoothing: 1
 --- !u!1 &660078323
 GameObject:
   m_ObjectHideFlags: 0
@@ -4425,11 +4406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallax: 0.7
---- !u!4 &1942755866840014100 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7445232087420547655, guid: 29b66c4673a6dc04f8d800fccb79995b, type: 3}
-  m_PrefabInstance: {fileID: 4690897887314707615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2528757315482727586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4519,6 +4495,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1287084894}
     m_Modifications:
+    - target: {fileID: 1587517197, guid: ef05cac8c28c6ce46883b0e0b8f94cea, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949702055, guid: ef05cac8c28c6ce46883b0e0b8f94cea, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 92d35fe1c59bbd14eaee9e3d3b54cea7, type: 3}
     - target: {fileID: 1888340481543570550, guid: ef05cac8c28c6ce46883b0e0b8f94cea, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.07398403
@@ -4906,11 +4890,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallax: 0
---- !u!4 &5514915142766616978 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6197401055001250915, guid: 29b66c4673a6dc04f8d800fccb79995b, type: 3}
-  m_PrefabInstance: {fileID: 4690897887314707615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5854764896701036624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3686978828167762342, guid: 24735fb4e7e049540804674b825e849f, type: 3}
@@ -4934,11 +4913,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallax: 0
---- !u!4 &6690757016533815376 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4149607997124901267, guid: 29b66c4673a6dc04f8d800fccb79995b, type: 3}
-  m_PrefabInstance: {fileID: 4690897887314707615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7091632376989215222
 PrefabInstance:
   m_ObjectHideFlags: 0
