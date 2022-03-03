@@ -15,6 +15,8 @@ The only way home is to fight the buggy creatures and find the portal that opens
 
 ### Install instructions
 
+The game binary files can be found here on [itch.io](https://candiepih.itch.io/buggy-man).
+
 Download the zip file. Unzip the file and run the executable "BuggyMan".
 
 ### Controls
